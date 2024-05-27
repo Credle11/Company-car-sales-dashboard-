@@ -37,22 +37,83 @@ The data is sourced from the vehicle sales records and includes the following co
 
 ## Data analysis 
 
-```Dax
-TOTALYTD(SUM(Sheet1[Sold Price]),&#39;CA sold date&#39;[Date],&quot;30,4,2024&quot;)
-TOTALYTD(SUM(Sheet1[Sold Price]),&#39;CA sold date&#39;[Date],&#39;CA sold date&#39;,&quot;01,05,2023&quot;)
+YTD TOTAL Sold
+```Dax  
+TOTALYTD(SUM(Sheet1[Sold Price]),'CA sold date'[Date],"30,4,2024")
+```
+Previous YTD Total sold
+``` dax 
+TOTALYTD(SUM(Sheet1[Sold Price]),'CA sold date'[Date],'CA sold date',"01,05,2023")
+```
+Sale difference
+```dax
 [YTD Total sold]-[Previous YTD Total sold]
-IF([Sale difference]&gt;0, &quot;Green&quot;, &quot;Red&quot;)
+```
+sale Difference in colour to show when sales is low 
+```dax
+IF([Sale difference]>0, "Green", "Red")
+```
+YOY Sale Growth
+```dax
 [Sale difference] / [Previous YTD Total sold]
-TOTALYTD(SUM(Sheet1[Purchase Price]),&#39;CA purchase date&#39;[Date],&quot;30,4,2024&quot;)
-TOTALMTD(SUM(Sheet1[Sold Price]), &#39;CA sold date&#39;[Date])
-CONCATENATE(&quot;MTD Total Sale : &quot;,FORMAT([MTD Total sale]/1000000,&quot;£0.00m&quot;))
-TOTALMTD(SUM(Sheet1[Purchase Price]),&#39;CA purchase date&#39;[Date])
-CONCATENATE(&quot;MTD Total Purchase : &quot;,FORMAT([MTD Total sale]/1000000,&quot;£0.00m&quot;))
+```
+YTD Total purchase
+```dax
+TOTALYTD(SUM(Sheet1[Purchase Price]),'CA purchase date'[Date],"30,4,2024")
+```
+MTD Total sale
+```dax
+TOTALMTD(SUM(Sheet1[Sold Price]), 'CA sold date'[Date])
+```
+MTD KPI
+```dax
+CONCATENATE("MTD Total Sale : ",FORMAT([MTD Total sale]/1000000,"£0.00m"))
+```
+MTD Total purchase
+```dax
+TOTALMTD(SUM(Sheet1[Purchase Price]),'CA purchase date'[Date])
+```
+MTD KPI Purchase
+```dax
+CONCATENATE("MTD Total Purchase : ",FORMAT([MTD Total sale]/1000000,"£0.00m"))
+```
+Combined YTD Total Sold
+```dax
 [YTD Total purchase] + [YTD Total Sold] + [YTD Total Sold Agreed]
-TOTALYTD(COUNT(Sheet1[Vehicle ID]), &#39;CA sold date&#39;[Date])
+````
+YTD Total Sold Agreed
+```dax
+TOTALYTD(COUNT(Sheet1[Vehicle ID]), 'CA sold date'[Date])
+```
+
+Total CAP Value
+```dax
 SUM(Sheet1[CAP Value])
+```
+Total Sales
+```dax
 SUM(Sheet1[Purchase Price])
+```
+Total Metal Margin
+```dax
 SUM(Sheet1[Metal Margin])
-IF(MAXX(ALLSELECTED(&#39;CA sold date&#39;[Month]),[Total Sales])= [Total Sales],MAXX(ALLSELECTED(&#39;CA sold
-date&#39;[Month]),[Total Sales]),BLANK())
-![image](https://github.com/Credle11/Company-car-sales-dashboard-/assets/170504844/c080c996-ed2b-4884-9260-565ebb931e62)
+```
+Max Point
+```dax
+IF(MAXX(ALLSELECTED('CA sold date'[Month]),[Total Sales])= [Total Sales],MAXX(ALLSELECTED('CA sold date'[Month]),[Total Sales]),BLANK())![image]
+```
+(https://github.com/Credle11/Company-car-sales-dashboard-/assets/170504844/05daec31-1a4c-4e3d-822f-ae1c35f27ecf)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
