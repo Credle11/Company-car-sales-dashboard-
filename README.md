@@ -102,18 +102,3 @@ Max Point
 ```dax
 IF(MAXX(ALLSELECTED('CA sold date'[Month]),[Total Sales])= [Total Sales],MAXX(ALLSELECTED('CA sold date'[Month]),[Total Sales]),BLANK())![image]
 ```
-(https://github.com/Credle11/Company-car-sales-dashboard-/assets/170504844/05daec31-1a4c-4e3d-822f-ae1c35f27ecf)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
