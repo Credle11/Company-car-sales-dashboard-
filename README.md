@@ -102,4 +102,15 @@ Max Point
 ```dax
 IF(MAXX(ALLSELECTED('CA sold date'[Month]),[Total Sales])= [Total Sales],MAXX(ALLSELECTED('CA sold date'[Month]),[Total Sales]),BLANK())![image]
 ```
+## Dashboard 
 ![power bi screen ](https://github.com/Credle11/Company-car-sales-dashboard-/assets/170504844/a74dd5dd-9dcd-4a81-a9a4-8e53fb308d83)
+![Screenshot 2024-05-28 015058](https://github.com/Credle11/Company-car-sales-dashboard-/assets/170504844/b26da192-192c-4f9b-941a-c52ad0111612)
+![Screenshot 2024-05-28 014419](https://github.com/Credle11/Company-car-sales-dashboard-/assets/170504844/da64f55c-5949-45c5-8c91-a21b49fcb87e)
+![Screenshot 2024-05-28 014612](https://github.com/Credle11/Company-car-sales-dashboard-/assets/170504844/6ec2e81c-7c9a-4516-a875-db65e8fc46ec)
+![Screenshot 2024-05-28 014824](https://github.com/Credle11/Company-car-sales-dashboard-/assets/170504844/3b1cbef7-960a-487e-a27a-71db32b02d16)
+![Screenshot 2024-05-28 014919](https://github.com/Credle11/Company-car-sales-dashboard-/assets/170504844/ea727018-c8e2-44b7-9fe7-2890219ddbee)
+![Screenshot 2024-05-28 014919](https://github.com/Credle11/Company-car-sales-dashboard-/assets/170504844/c06ea093-55a3-4c7e-99cd-48db7e234b7d)
+![Screenshot 2024-05-28 015001](https://github.com/Credle11/Company-car-sales-dashboard-/assets/170504844/7e48a1b7-3b2b-4f4c-a97b-e3e2c63a0cf4)
+![Screenshot 2024-05-28 015058](https://github.com/Credle11/Company-car-sales-dashboard-/assets/170504844/8fe31fc3-88a2-405c-80f9-502529f9e64e)
+
+
